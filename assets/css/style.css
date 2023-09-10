@@ -1109,6 +1109,33 @@ textarea.input-field {
   .navbar-link::before { height: 2px; }
 
 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 24px; /* Adjust the font size as needed */
+    color: #333; /* Adjust the text color as needed */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 200px; /* Adjust the width of the logo image as needed */
+    height: auto;
+    margin-right: 10px; /* Adjust the margin as needed to separate the image from the text */
+}
+
+.logo span {
+    font-size: 18px; /* Adjust the font size for the "Ai" part as needed */
+    color: #007bff; /* Adjust the color for the "Ai" part as needed */
+    margin-left: 5px; /* Adjust the margin as needed to separate the "Ai" from the text */
+}
+
+
 
   /**
    * HERO
