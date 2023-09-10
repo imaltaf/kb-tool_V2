@@ -1771,3 +1771,41 @@ button:hover {
   text-align: left;
   color: #fff;
 }
+
+    .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      display: flex;
+      flex-direction: column; /* Align content vertically */
+      align-items: center;
+    }
+
+    .logo0 {
+      margin-bottom: 10px; /* Add space between logo and social icons */
+    }
+
+    .logo0 img {
+      width: 50px; /* Adjust logo size as needed */
+    }
+
+    .contact-social-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+    }
+
+    .contact-social-list li {
+      margin: 0 10px; /* Adjust spacing between social icons */
+    }
+
+    .contact-social-link {
+      color: #221e1e;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    ion-icon {
+      font-size: 24px;
+    }
