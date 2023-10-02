@@ -182,3 +182,30 @@ function checkEnter(event) {
       copiedMessage.classList.remove('show');
     }, 2000);
   }
+
+
+  /**zuba */
+
+  function searchZauba() {
+    const companyName = document.getElementById("companyName").value;
+    window.open(`https://www.google.com/search?q=zauba.com+${companyName}`, "_blank");
+}
+
+function searchCompanyCheck() {
+    const companyName = document.getElementById("companyName").value;
+    window.open(`https://www.google.com/search?q=thecompanycheck.com+${companyName}`, "_blank");
+}
+
+function searchTofler() {
+    const companyName = document.getElementById("companyName").value;
+    window.open(`https://www.google.com/search?q=tofler.in+${companyName}`, "_blank");
+}
+
+function siteSearch() {
+    const siteQuery = document.getElementById("companyName").value;
+    window.open(`https://www.google.com/search?q=site:${siteQuery}`, "_blank");
+}
+
+function resetInput() {
+    document.getElementById("companyName").value = '';
+}

@@ -1524,44 +1524,23 @@ button:hover {
 
   /*zauba css*/
 
-  .header_h2 {
-    margin-top: 80px; /* Adjust the margin-top value as needed */
-    text-align: center; /* Center the text horizontally */
-  }
-  
-  .header_h2 h1 {
-    display: block;
-  }
-  
-  .container-center {
+  .company-input-container {
+    margin-top: 30px; /* Adjust the margin-top value as needed */
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    /* Adjust the height if needed */
+    gap: 10px;
   }
 
+  .reset-button {
+    background-color: #dd2d2d;
+    color: white;
+}
 
-  /*zauba search*/
-  .header_h3 {
-    margin-top: 70px; /* Adjust the margin-top value as needed */
-    text-align: center; /* Center the text horizontally */
-  }
-  
-  .header_h3 h1 {
-    display: block;
-  }
-
-  .container-zauba1 {
-    text-align: center;
-     /* Example background color */
-    
-  }
-  
-  .zauba_container {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    
+  .reset-button:hover {
+  background-color: #880606;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -1809,3 +1788,4 @@ button:hover {
     ion-icon {
       font-size: 24px;
     }
+

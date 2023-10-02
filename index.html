@@ -124,25 +124,25 @@
 </section>
 
 <section>
-    <div class="header_h2">
-        <h1>Company Name Search</h1>
-      </div>
-      <div class="container-center">
-        <div class="container-zauba1">
-          <label style="color: rgb(73, 151, 63);" for="companyName">Enter company name:</label>
-          <br>
-          <input type="text" id="companyName" placeholder="Company Name">
-          <br>
-          <label style="color: rgb(73, 151, 63);"><input type="radio" name="searchType" value="site" checked> Site</label>
-          <label style="color: rgb(73, 151, 63);"><input type="radio" name="searchType" value="zauba"> Zauba</label>
-          <br>
-          <button onclick="search()" style="background-color: #3e5c0f;">Search</button>
-          <button id="zreset" onclick="resetForm()">Reset</button>
+
+
+  <div style="color: rgb(73, 151, 63);" class="header_h1">Company Search Engine</h1>
+        
+        <div class="company-input-container">
+            <input type="text" id="companyName" class="company-input" placeholder="Enter Company Name">
+            <button class="reset-button" onclick="resetInput()">&#x2716;</button>
         </div>
-      </div>
+        
+        <div class="button-container">
+            <button class="search-button" onclick="searchZauba()" target="_blank">Zauba</button>
+            <button class="search-button" onclick="searchCompanyCheck()" target="_blank">Company Check</button>
+            <button class="search-button" onclick="searchTofler()" target="_blank">Tofler</button>
+            <button class="search-button" onclick="siteSearch()" target="_blank">WebSite</button>
+        </div>
+
 </section>
 
-<section>
+<!--<section>
     <div class="zauba_container">
         <div class="header_h3">
             <h1>Only Zauba search </h1>
@@ -151,7 +151,7 @@
         </script>
         <div class="gcse-searchbox-only"></div>
       </div>
-</section>
+</section> -->
 
 <section>
     <div class="header_h4">
@@ -192,7 +192,7 @@
 
       <!-- 
         - #CONTACT
-     
+
 
       <section class="contact" id="contact">
 
@@ -219,7 +219,6 @@
 
             </li>
           -->
- 
 
         </div>
 <!--
