@@ -203,7 +203,7 @@ function searchTofler() {
 
 function siteSearch() {
     const siteQuery = document.getElementById("companyName").value;
-    window.open(`https://www.google.com/search?q=site:${siteQuery}`, "_blank");
+    window.open(`https://www.google.com/search?q=site: ${siteQuery}`, "_blank");
 }
 
 function resetInput() {
