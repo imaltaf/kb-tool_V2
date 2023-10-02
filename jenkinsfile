@@ -5,9 +5,9 @@ pipeline {
     environment {
         APP_NAME = "kb_tool"
         RELEASE = "2.0.0"
-        DOCKER_USER= "darkmechanic"
+        DOCKER_USER = "darkmechanic"
         DOCKER_PASS = 'dockerhub'
-        IMAGE_NAME = "${DOCKER_USER}" + "/" + "${APP_NAME}"
+        IMAGE_NAME = "${DOCKER_USER}/${APP_NAME}"
         IMAGE_TAG = "${RELEASE}-${BUILD_NUMBER}"
     }
 
@@ -28,20 +28,29 @@ pipeline {
 
         stage('Build and Push Dockerhub IMG') {
             steps {
-                script{
-                    docker.withRegistry('',DOCKER_PASS) {
-                        docker_image = docker.build "${IMAGE_NAME}"
-                    }
-                    docker.withRegistry('',DOCKER_PASS) {
-                        docker_image.push("${IMAGE_TAG}")
-                        docker_image.push('latest')
+                script {
+                    docker.withRegistry('', DOCKER_PASS) {
+                        def docker_image = docker.build("${IMAGE_NAME}:${IMAGE_TAG}")
+                        docker_image.push()
                     }
                 }
             }
         }
 
-        
+        stage('Clean Up and Redeploy') {
+            steps {
+                script {
+                    // Stop and remove existing containers
+                    sh 'docker-compose down'
 
+                    // Remove the old image (replace 'kb_tool' with your image name)
+                    sh 'docker rmi ${DOCKER_USER}/${APP_NAME}:latest'
+
+                    // Redeploy the application with updated image
+                    sh 'docker-compose up -d'
+                }
+            }
+        }
     }
 
     post {
