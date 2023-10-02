@@ -1,0 +1,8 @@
+version: "3"
+services:
+  kbtool_v2.1:
+    image: darkmechanic/kb_tool:latest
+    container_name: kbtool_v2.3
+    ports:
+      - "8061:80"
+    restart: unless-stopped
