@@ -2,6 +2,10 @@ pipeline {
     agent {
         label 'DevOps_server'
     }
+
+    tools{
+        maven 'Maven3'
+    }
     environment {
         APP_NAME = "kb_tool"
         RELEASE = "2.0.0"
@@ -25,6 +29,7 @@ pipeline {
                 }
             }
         }
+
 
         stage('Build and Push Dockerhub IMG') {
             steps {

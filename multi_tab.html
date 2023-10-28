@@ -1,192 +1,192 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Tab Opener</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #333, #000); /* Black to dark gray gradient background */
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Tab Opener</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background: linear-gradient(to right, #333, #000); /* Black to dark gray gradient background */
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
 
-        h1 {
-            font-size: 24px;
-            color: #fff; /* White text */
-        }
+            h1 {
+                font-size: 24px;
+                color: #fff; /* White text */
+            }
 
-        .container {
-            background-color: #333; /* Dark gray container background */
-            border: 1px solid #1ecb00;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 0 20px rgba(30, 203, 0, 0.2);
-        }
+            .container {
+                background-color: #333; /* Dark gray container background */
+                border: 1px solid #1ecb00;
+                border-radius: 10px;
+                padding: 20px;
+                box-shadow: 0 0 20px rgba(30, 203, 0, 0.2);
+            }
 
-        .input-container {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+            .input-container {
+                text-align: center;
+                margin-bottom: 20px;
+            }
 
-        label {
-            font-size: 18px;
-            color: #fff; /* White text */
-        }
+            label {
+                font-size: 18px;
+                color: #fff; /* White text */
+            }
 
-        input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #1ecb00;
-            border-radius: 5px;
-        }
+            input[type="text"] {
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+                border: 1px solid #1ecb00;
+                border-radius: 5px;
+            }
 
-        button.open {
-            background: linear-gradient(to bottom, #00b30b, #008f09); /* Green gradient button */
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 18px;
-            transition: background 0.3s;
-        }
+            button.open {
+                background: linear-gradient(to bottom, #00b30b, #008f09); /* Green gradient button */
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 18px;
+                transition: background 0.3s;
+            }
 
-        button.stop {
-            background: linear-gradient(to bottom, #ff3333, #cc0000); /* Red gradient button */
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 18px;
-            transition: background 0.3s;
-        }
+            button.stop {
+                background: linear-gradient(to bottom, #ff3333, #cc0000); /* Red gradient button */
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 18px;
+                transition: background 0.3s;
+            }
 
-        button.reset {
-            background: linear-gradient(to bottom, #007fff, #0056b3); /* Blue gradient button */
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 18px;
-            transition: background 0.3s;
-        }
+            button.reset {
+                background: linear-gradient(to bottom, #007fff, #0056b3); /* Blue gradient button */
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 18px;
+                transition: background 0.3s;
+            }
 
-        button.open:hover {
-            background: linear-gradient(to bottom, #008f09, #007b07); /* Darker green on hover */
-        }
+            button.open:hover {
+                background: linear-gradient(to bottom, #008f09, #007b07); /* Darker green on hover */
+            }
 
-        button.stop:hover {
-            background: linear-gradient(to bottom, #cc0000, #aa0000); /* Darker red on hover */
-        }
+            button.stop:hover {
+                background: linear-gradient(to bottom, #cc0000, #aa0000); /* Darker red on hover */
+            }
 
-        button.reset:hover {
-            background: linear-gradient(to bottom, #0056b3, #004199); /* Darker blue on hover */
-        }
+            button.reset:hover {
+                background: linear-gradient(to bottom, #0056b3, #004199); /* Darker blue on hover */
+            }
 
-        .result-container {
-            text-align: center;
-        }
+            .result-container {
+                text-align: center;
+            }
 
-        p {
-            font-size: 16px;
-            color: #fff; /* White text */
-        }
+            p {
+                font-size: 16px;
+                color: #fff; /* White text */
+            }
 
-        span {
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-    <h1>Multi-Tab open </h1>
-    
-    <div class="container">
-        <div class="input-container">
-            <label for="idInput">Enter IDs</label>
-            <input type="text" id="idInput" placeholder="e.g., 60067633 12345 67890">
-            <button id="openTabsButton" class="open">Open Tabs</button>
-            <button id="stopTabsButton" class="stop" disabled>Stop</button>
-            <button id="resetButton" class="reset" disabled>Reset</button>
-        </div>
+            span {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Multi-Tab open </h1>
         
-        <div class="result-container">
-            <p>Status: <span id="status">Ready</span></p>
+        <div class="container">
+            <div class="input-container">
+                <label for="idInput">Enter IDs</label>
+                <input type="text" id="idInput" placeholder="e.g., 60067633 12345 67890">
+                <button id="openTabsButton" class="open">Open Tabs</button>
+                <button id="stopTabsButton" class="stop" disabled>Stop</button>
+                <button id="resetButton" class="reset" disabled>Reset</button>
+            </div>
+            
+            <div class="result-container">
+                <p>Status: <span id="status">Ready</span></p>
+            </div>
         </div>
-    </div>
 
-    <script>
-        const status = document.getElementById("status");
-        const openTabsButton = document.getElementById("openTabsButton");
-        const stopTabsButton = document.getElementById("stopTabsButton");
-        const resetButton = document.getElementById("resetButton");
-        let tabOpeningInterval;
+        <script>
+            const status = document.getElementById("status");
+            const openTabsButton = document.getElementById("openTabsButton");
+            const stopTabsButton = document.getElementById("stopTabsButton");
+            const resetButton = document.getElementById("resetButton");
+            let tabOpeningInterval;
 
-        function openTabs() {
-            const idInput = document.getElementById("idInput");
-            const ids = idInput.value.split(" ").filter(id => id.trim() !== '');
+            function openTabs() {
+                const idInput = document.getElementById("idInput");
+                const ids = idInput.value.split(" ").filter(id => id.trim() !== '');
 
-            if (ids.length === 0) {
-                status.textContent = "No IDs provided";
-                return;
-            }
-
-            status.textContent = "Opening tabs...";
-            openTabsButton.disabled = true;
-            stopTabsButton.disabled = false;
-            resetButton.disabled = true;
-            idInput.disabled = true;
-
-            let index = 0;
-
-            function openNextTab() {
-                if (index < ids.length) {
-                    const id = ids[index];
-                    const url = `https://fkb.kreditbee.in/admin/profile?id=${id}`;
-                    window.open(url, "_blank");
-                    index++;
-                    tabOpeningInterval = setTimeout(openNextTab, 3000);
-                } else {
-                    status.textContent = "All tabs opened";
-                    openTabsButton.disabled = false;
-                    stopTabsButton.disabled = true;
-                    resetButton.disabled = false;
-                    idInput.disabled = false;
+                if (ids.length === 0) {
+                    status.textContent = "No IDs provided";
+                    return;
                 }
+
+                status.textContent = "Opening tabs...";
+                openTabsButton.disabled = true;
+                stopTabsButton.disabled = false;
+                resetButton.disabled = true;
+                idInput.disabled = true;
+
+                let index = 0;
+
+                function openNextTab() {
+                    if (index < ids.length) {
+                        const id = ids[index];
+                        const url = `https://fkb.kreditbee.in/admin/profile?id=${id}`;
+                        window.open(url, "_blank");
+                        index++;
+                        tabOpeningInterval = setTimeout(openNextTab, 3000);
+                    } else {
+                        status.textContent = "All tabs opened";
+                        openTabsButton.disabled = false;
+                        stopTabsButton.disabled = true;
+                        resetButton.disabled = false;
+                        idInput.disabled = false;
+                    }
+                }
+
+                openNextTab();
             }
 
-            openNextTab();
-        }
+            function stopTabs() {
+                clearTimeout(tabOpeningInterval);
+                status.textContent = "Tab opening process stopped";
+                openTabsButton.disabled = false;
+                stopTabsButton.disabled = true;
+                resetButton.disabled = false;
+                idInput.disabled = false;
+            }
 
-        function stopTabs() {
-            clearTimeout(tabOpeningInterval);
-            status.textContent = "Tab opening process stopped";
-            openTabsButton.disabled = false;
-            stopTabsButton.disabled = true;
-            resetButton.disabled = false;
-            idInput.disabled = false;
-        }
+            function reset() {
+                clearTimeout(tabOpeningInterval);
+                status.textContent = "Ready";
+                openTabsButton.disabled = false;
+                stopTabsButton.disabled = true;
+                resetButton.disabled = true;
+                idInput.value = "";
+                idInput.disabled = false;
+            }
 
-        function reset() {
-            clearTimeout(tabOpeningInterval);
-            status.textContent = "Ready";
-            openTabsButton.disabled = false;
-            stopTabsButton.disabled = true;
-            resetButton.disabled = true;
-            idInput.value = "";
-            idInput.disabled = false;
-        }
-
-        openTabsButton.addEventListener("click", openTabs);
-        stopTabsButton.addEventListener("click", stopTabs);
-        resetButton.addEventListener("click", reset);
-    </script>
-</body>
-</html>
+            openTabsButton.addEventListener("click", openTabs);
+            stopTabsButton.addEventListener("click", stopTabs);
+            resetButton.addEventListener("click", reset);
+        </script>
+    </body>
+    </html>

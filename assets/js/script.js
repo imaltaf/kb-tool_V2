@@ -188,7 +188,7 @@ function checkEnter(event) {
 
   function searchZauba() {
     const companyName = document.getElementById("companyName").value;
-    window.open(`https://www.google.com/search?q=zauba.com+${companyName}`, "_blank");
+    window.open(`https://www.google.com/search?q=zauba +${companyName}`, "_blank");
 }
 
 function searchCompanyCheck() {
