@@ -1,8 +1,8 @@
 version: "3"
 services:
-  kb_tool:
-    image: darkmechanic/kb_tool:latest
-    container_name: kb_tool:latest
+  kbtool:
+    image: darkmechanic/kbtool:latest
+    container_name: kbtool:latest
 
     ports:
       - "8061:80"
