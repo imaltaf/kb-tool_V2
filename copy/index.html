@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="copyfield">
+        <span id="link">https://www.youtube.com/firoijspj&Vgvjhv?/kcom</span>
+        <span id="copy-btn">Copy</span>
+    </div>
+    <div class="copyfield">
+        <span id="link">Hello</span>
+        <span id="copy-btn">Copy</span>
+    </div>
+
+    <script>
+        var copyBtns = document.querySelectorAll(".copy-btn");
+        var elementsToCopy = document.querySelectorAll(".copy-content");
+
+        copyBtns.forEach(function(copyBtn, index) {
+            copyBtn.onclick = function () {
+                var copiedText = elementsToCopy[index].innerHTML;
+                
+                navigator.clipboard.writeText(copiedText);
+                copyBtn.innerHTML = "Copied";
+
+                setTimeout(function () {
+                    copyBtn.innerHTML = "Copy";
+                }, 2000); // Reset to "Copy" after 2 seconds
+            };
+        });
+  setTimeout(function () {
+        copybtn.innerHTML = "Copy";
+    }, 2000); // Reset to "Copy" after 2 seconds
+};
+
+
+    </script>
+</html>

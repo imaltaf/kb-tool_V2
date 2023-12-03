@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand';
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyfield{
+    display: flex;
+    align-items: center;
+    background-color: #212121;
+    border-radius: 5px;
+}
+
+#link{
+    width: 350px;
+    padding: 12px 10px;
+    border: 1px solid #212121;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 19px;
+    overflow-x: scroll;
+}
+#link::-webkit-scrollbar{
+    display: none;
+}
+
+#copy-btn{
+    color: #fff;
+    padding: 0 20px;
+    font-size: 18px;
+    cursor: pointer;
+}

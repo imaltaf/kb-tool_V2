@@ -1,8 +1,8 @@
 version: "3"
 services:
-  kbtool_v2.1:
-    image: darkmechanic/kb_tool:latest
-    container_name: kbtool_v2.3
+  my_portfilo:
+    image: darkmechanic/my_portfilo:latest
+    container_name: my_portfilo
     ports:
-      - "8061:80"
+      - "30004:80"
     restart: unless-stopped
