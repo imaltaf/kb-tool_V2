@@ -33,7 +33,7 @@
 
   <!-- 
     - #HEADER
-  -->
+  
 
   <header class="header" data-header>
     <div class="container">
@@ -88,44 +88,43 @@
           <li>
             <a href="#contact" class="navbar-link">Contact.</a>
           </li>
--->
+
         </ul>
       </nav>
 
     </div>
   </header>
 
-
+-->
 
   <a href="#top" class="go-top" data-go-top title="Go to Top">
     <ion-icon name="arrow-up"></ion-icon>
   </a>
-
-  <div class="header_h6">
-    <h1><span>★</span>★<span>★</span></h1>
-  </div>
+  <div class="container">
+    <div class="header_h1">
+      <h1>In-put Transaction IDs</h1>
+    </div>
   
-  <div class="header_h1">
-    <h1>In-put Transaction IDs</h1>
-  </div>
-
-  <div class="container-Ag">
-    <label style="color: rgb(73, 151, 63);" for="loanId">Enter customer ID for QID 106 and 117 :</label>
-    <input type="text" id="loanId" onkeyup="checkEnter(event)">
-  </div>
+    <div class="container-Ag">
+      
+      <input type="text" id="loanId" placeholder="QID 106 and 117" onkeyup="checkEnter(event)">
+    </div>
+    
+    <div class="container-ids">
+      <input type="text" id="ids" placeholder="Enter transactions_info_id and press Enter to copy" onkeyup="checkEnter(event)">
+    </div>
   
-  <div class="container-ids">
-    <input type="text" id="ids" placeholder="Enter transactions_info_id and press Enter to copy" onkeyup="checkEnter(event)">
+    <div class="button-container">
+      <button id="copyButton" onclick="copyResult()">
+        <i class="fas fa-copy"></i> Copy
+      </button>
+      <button id="resetButton" onclick="resetFields()">
+        <i class="fas fa-redo"></i> Reset <span id="resetCount">0</span>
+      </button>
+    </div>
+  
+    <div id="output">Result will be displayed here</div>
   </div>
-  <div class="button-container">
-    <button id="copyButton" onclick="copyResult()">
-      <i class="fas fa-copy"></i> Copy
-    </button>
-    <button id="resetButton" onclick="resetFields()">
-      <i class="fas fa-redo"></i> Reset
-  </button>
-  </div>
-  <div id="output"></div>
 </section>
 
 <section>
@@ -157,151 +156,55 @@
         <div class="gcse-searchbox-only"></div>
       </div>
 </section> -->
+   
 
-<section>
-    <div class="header_h4">
-        <h1>copy-comments</h1>
-      </div>
-  <div class="container-bt">
-    <div class="button" onclick="copyToClipboard('QID75-Latest 3-months statement not available, Need Recent 3/6 Months Bank Acc statement Hence Given Preset.', this)">
-      <i class="bi bi-clipboard icon"></i>
-      <span>QID-75</span>
-      <div class="copied-message">Copied!</div>
-    </div>
-    <div class="button" onclick="copyToClipboard('Need valid id card or pay slips to confirm salary', this)">
-      <i class="bi bi-clipboard icon"></i>
-      <span>Docs-reupload</span>
-      <div class="copied-message">Copied!</div>
-    </div>
-    <div class="button" onclick="copyToClipboard('salary not found -- ', this)">
-      <i class="bi bi-clipboard icon"></i>
-      <span>not salary</span>
-      <div class="copied-message">Copied!</div>
-    </div>
-    <div class="button" onclick="copyToClipboard('Need to confirm salary -- ', this)">
-      <i class="bi bi-clipboard icon"></i>
-      <span>salary-hold</span>
-      <div class="copied-message">Copied!</div>
-    </div>
-    <div class="button" onclick="copyToClipboard('Need till date bank statement -- Hence given p-reset ', this)">
-      <i class="bi bi-clipboard icon"></i>
-      <span>1m p-reset</span>
-      <div class="
-      copied-message">Copied!</div>
-    </div>
+<div class="container0">
+  <div class="tabs">
+    <div class="tab" onclick="showTab('approved')">Approved</div>
+    <div class="tab" onclick="showTab('reject')">Reject</div>
+    <div class="tab" onclick="showTab('pending')">Add</div>
   </div>
-  <div style="margin-bottom: 330px;"></div>
-</section>
 
+  <div id="approved" class="content">
+    <h2>QID_109</h2>
+    <button class="copy-button" onclick="copyToClipboard('salary_slip', this)">salary_slip</button>
+    <button class="copy-button" onclick="copyToClipboard('bank_narration', this)">bank_narration</button>
+    <button class="copy-button" onclick="copyToClipboard('company_id', this)">company_id</button>
+    <h2>QID_061</h2>
+    <button class="copy-button" onclick="copyToClipboard('Approved', this)">Approved</button>
+    <h2>QID_102</h2>
+    <button class="copy-button" onclick="copyToClipboard('KYC documents are proper', this)">KYC</button>
+    <button class="copy-button" onclick="copyToClipboard('selfie', this)">selfie</button>
+    <button class="copy-button" onclick="copyToClipboard('pan', this)">pan</button>
+    <button class="copy-button" onclick="copyToClipboard('aadhaar', this)">aadhaar</button>
+  </div>
 
+  <div id="reject" class="content" style="display: none;">
+    <!-- Content for Reject tab goes here -->
+    <h5>QID_108</h5>
+    <button class="copy-button" onclick="copyToClipboard('NOT APPROVED', this)">NOT APPROVED</button>
+    <h5>QID_109</h5>
+    <button class="copy-button" onclick="copyToClipboard('NOT MATCH', this)">NOT MATCH</button>
+    <h5>QID_101</h5>
+    <button class="copy-button" onclick="copyToClipboard('not found', this)">not found</button>
+    <h4>QID_061</h4>
+    <button class="copy-button" onclick="copyToClipboard('Salary Mode is cash', this)">cash</button>
+    <button class="copy-button" onclick="copyToClipboard('Salary Mode is Cheque', this)">Cheque</button>
+    <button class="copy-button" onclick="copyToClipboard('Govt Employee', this)">Govt Employee</button>
+    <button class="copy-button" onclick="copyToClipboard('Self Employed', this)">Self Employed</button>
+    <button class="copy-button" onclick="copyToClipboard('Not a Salaried Employee', this)">NOT-Sal</button>
+    <button class="copy-button" onclick="copyToClipboard('Salary Irregular', this)">Salary Irregular</button>
+  </div>
 
-      <!-- 
-        - #CONTACT
+  <div id="pending" class="content" style="display: none;">
+    <!-- Content for Pending tab goes here -->
+    <button class="copy-button" onclick="copyToClipboard('QID75-Latest 3-months statement not available, Need Recent 3/6 Months Bank Acc statement Hence Given Preset.', this)">QID_75</button>
+    <button class="copy-button" onclick="copyToClipboard('Need valid id card or pay slips to confirm salary', this)">Docs</button>
+    <button class="copy-button" onclick="copyToClipboard('salary not found -- ', this)">Not_Sal</button>
+    <button class="copy-button" onclick="copyToClipboard('Need to confirm salary -- ', this)">Salary_Hold Text 4</button>
+    <button class="copy-button" onclick="copyToClipboard('Need till date bank statement -- Hence given p-reset ', this)">1M-p-reset</button>
 
-
-      <section class="contact" id="contact">
-
-        <div class="contact-content section-content">
-
-          <p class="section-subtitle">Contact</p>
-
-
-            <li class="contact-list-item">
-
-              <div class="contact-item-icon">
-                <ion-icon name="mail-outline"></ion-icon>
-              </div>
-
-              <div class="wrapper">
-                <h3 class="h4 contact-item-title">Email:</h3>
-
-
-
-                <a href="mailto:info@opensecai.com" class="contact-info">info@opensecai.com</a>
-
-                <a href="mailto:support@opensecai.com" class="contact-info">support@opensecai.com</a>
-              </div>
-
-            </li>
-          -->
-
-        </div>
-<!--
-        <form action="https://formsubmit.co/imaltaf@proton.me" method="POST" class="contact-form">
-
-          <div class="form-wrapper">
-
-            <label for="name" class="form-label">Name</label>
-
-            <div class="input-wrapper">
-
-              <input type="text" name="name" id="name" required placeholder="e.g Altaf" class="input-field">
-
-              <ion-icon name="person-circle"></ion-icon>
-
-            </div>
-
-          </div>
-
-          <div class="form-wrapper">
-
-            <label for="email" class="form-label">Email</label>
-
-            <div class="input-wrapper">
-
-              <input type="email" name="email" id="email" required placeholder="e.g altaf@opensecai.com"
-                class="input-field">
-
-              <ion-icon name="mail"></ion-icon>
-
-            </div>
-
-          </div>
-
-          <div class="form-wrapper">
-
-            <label for="phone" class="form-label">Phone</label>
-
-            <div class="input-wrapper">
-
-              <input type="tel" name="phone" id="phone" required placeholder="Phone Number" class="input-field">
-
-              <ion-icon name="call"></ion-icon>
-
-            </div>
-
-          </div>
-
-          <div class="form-wrapper">
-
-            <label for="message" class="form-label">Message</label>
-
-            <div class="input-wrapper">
-
-              <textarea name="message" id="message" required placeholder="Write message..."
-                class="input-field"></textarea>
-
-              <ion-icon name="chatbubbles"></ion-icon>
-
-            </div>
-
-          </div>
-
-          <button type="submit" class="btn btn-primary">Send</button>
-
-        </form>
-
-      </section>
-
-    </article>
-  </main>
-
-
--->
-
-  <!-- 
-    - #FOOTER
-  -->
+  </div>
 
   <footer class="footer">
     <div class="container">

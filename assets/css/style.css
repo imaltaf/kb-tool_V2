@@ -1737,7 +1737,7 @@ button:hover {
   color: #fff;
   width: 200px;
   outline: none;
-  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  box-shadow: 0 0 10px rgba(95, 95, 95, 0.5);
   transition: background-color 0.3s, box-shadow 0.3s;
 }
 
@@ -1750,7 +1750,7 @@ button:hover {
   color: #fff;
   width: 800px;
   outline: none;
-  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  box-shadow: 0 0 10px rgba(95, 95, 95, 0.5);
   transition: background-color 0.3s, box-shadow 0.3s;
 }
 
@@ -1779,42 +1779,132 @@ button:hover {
   text-align: left;
   color: #fff;
 }
+body {
+  margin: 0;
+  padding: 0;
+}
 
-    .footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      display: flex;
-      flex-direction: column; /* Align content vertically */
-      align-items: center;
-    }
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Align content vertically */
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
 
-    .logo0 {
-      margin-bottom: 10px; /* Add space between logo and social icons */
-    }
+.logo0 {
+  margin-bottom: 10px; /* Add space between logo and social icons */
+}
 
-    .logo0 img {
-      width: 50px; /* Adjust logo size as needed */
-    }
+.logo0 img {
+  width: 50px; /* Adjust logo size as needed */
+}
 
-    .contact-social-list {
-      list-style: none;
-      padding: 0;
-      display: flex;
-    }
+.contact-social-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
 
-    .contact-social-list li {
-      margin: 0 10px; /* Adjust spacing between social icons */
-    }
+.contact-social-list li {
+  margin: 0 10px; /* Adjust spacing between social icons */
+}
 
-    .contact-social-link {
-      color: #221e1e;
-      text-decoration: none;
-      font-size: 20px;
-    }
+.contact-social-link {
+  color: #221e1e;
+  text-decoration: none;
+  font-size: 20px;
+}
 
-    ion-icon {
-      font-size: 24px;
-    }
+ion-icon {
+  font-size: 24px;
+}
 
+ // copy
+
+ .container0 {
+  background: rgba(255, 255, 255, 0.015);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Glow border effect */
+  overflow: hidden;
+  max-width: 300px;
+  width: 90%;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  color: #fff;
+  user-select: none;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  font-family: 'HackerFont', monospace; /* Replace 'HackerFont' with the actual font you want to use */
+}
+
+.tab:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Glow effect on hover */
+}
+
+.content {
+  padding: 20px;
+  color: var(--text-color);
+}
+
+.copy-button {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  position: relative;
+}
+
+.copy-button:hover {
+  background: rgba(255, 255, 255, 0.3); /* Adjust the background color on hover */
+}
+
+.copied-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  color: #34D399;
+  font-weight: bold;
+  font-size: 12px;
+  animation: fadeInOut 2s forwards;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .tabs {
+    flex-direction: column;
+  }
+}

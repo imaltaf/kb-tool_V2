@@ -111,6 +111,8 @@ if (localStorage.getItem("theme") === "light_theme") {
 
 
 /**KB-tool */
+var resetCounter = 0;
+
 function copyResult() {
   var loanId = document.getElementById("loanId").value.trim();
   var idsInput = document.getElementById("ids").value.trim();
@@ -138,12 +140,21 @@ function copyResult() {
   window.getSelection().addRange(range);
   document.execCommand("copy");
   window.getSelection().removeAllRanges();
+
+  // Increment reset counter
+  resetCounter++;
+
+  // Reset fields after 5 seconds
+  setTimeout(function () {
+    resetFields();
+  }, 5000);
 }
 
 function resetFields() {
   document.getElementById("loanId").value = "";
   document.getElementById("ids").value = "";
   document.getElementById("output").innerHTML = "Result will be displayed here";
+  document.getElementById("resetCount").innerHTML = resetCounter;
 }
 
 function checkEnter(event) {
@@ -151,8 +162,7 @@ function checkEnter(event) {
     copyResult();
   }
 }
-
-  
+  //serch
   function search() {
     var companyName = document.getElementById("companyName").value;
     var searchType = document.querySelector('input[name="searchType"]:checked').value;
@@ -208,4 +218,40 @@ function siteSearch() {
 
 function resetInput() {
     document.getElementById("companyName").value = '';
+}
+
+// copy
+
+function showTab(tabId) {
+  // Hide all tabs
+  document.getElementById('approved').style.display = 'none';
+  document.getElementById('reject').style.display = 'none';
+  document.getElementById('pending').style.display = 'none';
+
+  // Show the selected tab
+  document.getElementById(tabId).style.display = 'block';
+}
+
+function copyToClipboard(text, button) {
+  const textarea = document.createElement('textarea');
+  textarea.value = text;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand('copy');
+  document.body.removeChild(textarea);
+
+  // Hide the stored text
+  button.innerText = '';
+
+  // Display the "Copied!" animation
+  const copiedAnimation = document.createElement('div');
+  copiedAnimation.classList.add('copied-animation');
+  copiedAnimation.innerText = 'Copied!';
+  button.appendChild(copiedAnimation);
+
+  setTimeout(() => {
+    // Show the stored text again
+    button.innerText = 'Copy ' + text;
+    button.removeChild(copiedAnimation);
+  }, 2000);
 }
