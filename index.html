@@ -31,71 +31,6 @@
 
 <body id="top" class="dark_theme">
 
-  <!-- 
-    - #HEADER
-  
-
-  <header class="header" data-header>
-    <div class="container">
-
-      <div class="logo">
-        <a href="https://opensecai.com"><img src="/assets/img/11Logo11-removebg-preview.png" alt="opensecAi Logo"></a>
-    </div>
-
-      <div class="navbar-actions">
-
-        <select name="language" id="lang">
-          <option value="en">En</option>
-          <option value="ar">Ar</option>
-        </select>
-
-        <button class="theme-btn" aria-label="Change Theme" title="Change Theme" data-theme-btn>
-          <span class="icon"></span>
-        </button>
-
-      </div>
-
-      <button class="nav-toggle-btn" aria-label="Toggle Menu" title="Toggle Menu" data-nav-toggle-btn>
-        <span class="one"></span>
-        <span class="two"></span>
-        <span class="three"></span>
-      </button>
-
-      <nav class="navbar" data-navbar>
-        <ul class="navbar-list">
-
-          <li>
-            <a href="https://opensecai.com/" class="navbar-link">Home.</a>
-          </li>
-
-          <li>
-            <a href="https://gst.imaltaf.online/" class="navbar-link">GST-Tool.</a>
-          </li>
-          
-          <li>
-            <a href="https://docs.imaltaf.online/" class="navbar-link">Docs.</a>
-          </li>
-          
-          <li>
-            <a href="https://pdf.imaltaf.online" class="navbar-link">pdf-Ai.</a>
-          </li>
-<!--
-          <li>
-            <a href="#Products" class="navbar-link">Products.</a>
-          </li>
-          
-
-          <li>
-            <a href="#contact" class="navbar-link">Contact.</a>
-          </li>
-
-        </ul>
-      </nav>
-
-    </div>
-  </header>
-
--->
 
   <a href="#top" class="go-top" data-go-top title="Go to Top">
     <ion-icon name="arrow-up"></ion-icon>
@@ -130,7 +65,7 @@
 <section>
 
 
-  <div style="color: rgb(73, 151, 63);" class="header_h1">Company Search Engine</h1>
+  <div style="color: rgb(255, 255, 255);" class="header_h1">Company Search Engine</h1>
         
         <div class="company-input-container">
             <input type="text" id="companyName" class="company-input" placeholder="Enter Company Name">
@@ -146,23 +81,14 @@
 
 </section>
 
-<!--<section>
-    <div class="zauba_container">
-        <div class="header_h3">
-            <h1>Only Zauba search </h1>
-          </div>
-        <script async src="https://cse.google.com/cse.js?cx=03c30e73c0d3441cd">
-        </script>
-        <div class="gcse-searchbox-only"></div>
-      </div>
-</section> -->
+
    
 
 <div class="container0">
-  <div class="tabs">
-    <div class="tab" onclick="showTab('approved')">Approved</div>
-    <div class="tab" onclick="showTab('reject')">Reject</div>
-    <div class="tab" onclick="showTab('pending')">Add</div>
+  <div class="header">
+    <button class="header-button" onclick="showTab('approved')">Approved</button>
+    <button class="header-button" onclick="showTab('reject')">Reject</button>
+    <button class="header-button" onclick="showTab('pending')">Add</button>
   </div>
 
   <div id="approved" class="content">
@@ -194,6 +120,11 @@
     <button class="copy-button" onclick="copyToClipboard('Self Employed', this)">Self Employed</button>
     <button class="copy-button" onclick="copyToClipboard('Not a Salaried Employee', this)">NOT-Sal</button>
     <button class="copy-button" onclick="copyToClipboard('Salary Irregular', this)">Salary Irregular</button>
+    <h2>QID_102</h2>
+    <button class="copy-button" onclick="copyToClipboard('KYC documents are proper', this)">KYC</button>
+    <button class="copy-button" onclick="copyToClipboard('selfie', this)">selfie</button>
+    <button class="copy-button" onclick="copyToClipboard('pan', this)">pan</button>
+    <button class="copy-button" onclick="copyToClipboard('aadhaar', this)">aadhaar</button>
   </div>
 
   <div id="pending" class="content" style="display: none;">
@@ -220,33 +151,7 @@
 
     </div>
 
-    <ul class="contact-social-list">
-      <li>
-        <a href="https://instagram.com/opensecai?utm_source=qr&igshid=ZGUzMzM3NWJiOQ%3D%3D" class="contact-social-link" target="_blank">
-          <ion-icon name="logo-instagram"></ion-icon>
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/opensecai" class="contact-social-link" target="_blank">
-          <ion-icon name="logo-github"></ion-icon>
-        </a>
-      </li>
-      <li>
-        <a href="https://twitter.com/opensec__ai" class="contact-social-link" target="_blank">
-          <ion-icon name="logo-twitter"></ion-icon>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/in/opensec-ai-7b2622285/" class="contact-social-link" target="_blank">
-          <ion-icon name="logo-linkedin"></ion-icon>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.youtube.com/@DarkMechanic" class="contact-social-link" target="_blank">
-          <ion-icon name="logo-youtube"></ion-icon>
-        </a>
-      </li>
-    </ul>
+
   </footer>
 
 
