@@ -37,7 +37,7 @@
   </a>
   <div class="container">
     <div class="header_h1">
-      <h1>In-put Transaction IDs</h1>
+      <h1></h1>
     </div>
   
     <div class="container-Ag">
@@ -46,7 +46,7 @@
     </div>
     
     <div class="container-ids">
-      <input type="text" id="ids" placeholder="Enter transactions_info_id and press Enter to copy" onkeyup="checkEnter(event)">
+      <input type="text" id="ids" placeholder="Enter transactions_id" onkeyup="checkEnter(event)">
     </div>
   
     <div class="button-container">
@@ -65,18 +65,18 @@
 <section>
 
 
-  <div style="color: rgb(255, 255, 255);" class="header_h1">Company Search Engine</h1>
         
         <div class="company-input-container">
+          <div style="color: rgb(255, 255, 255);" class="header_h1">Company Search Engine</h1>
             <input type="text" id="companyName" class="company-input" placeholder="Enter Company Name">
-            <button class="reset-button" onclick="resetInput()">&#x2716;</button>
-        </div>
-        
-        <div class="button-container">
-            <button class="search-button" onclick="searchZauba()" target="_blank">Zauba</button>
-            <button class="search-button" onclick="searchCompanyCheck()" target="_blank">Company Check</button>
-            <button class="search-button" onclick="searchTofler()" target="_blank">Tofler</button>
-            <button class="search-button" onclick="siteSearch()" target="_blank">WebSite</button>
+            <div class="button-0">
+              <button class="reset-button" onclick="resetInput()">&#x2716;</button>
+          
+              <button class="search-button" onclick="searchZauba()" target="_blank">Zauba</button>
+              <button class="search-button" onclick="searchCompanyCheck()" target="_blank">Company Check</button>
+              <button class="search-button" onclick="searchTofler()" target="_blank">Tofler</button>
+              <button class="search-button" onclick="siteSearch()" target="_blank">WebSite</button>
+          </div>
         </div>
 
 </section>
@@ -88,7 +88,7 @@
   <div class="header">
     <button class="header-button" onclick="showTab('approved')">Approved</button>
     <button class="header-button" onclick="showTab('reject')">Reject</button>
-    <button class="header-button" onclick="showTab('pending')">Add</button>
+    <button class="header-button" onclick="showTab('pending')">Comments</button>
   </div>
 
   <div id="approved" class="content">
@@ -96,6 +96,8 @@
     <button class="copy-button" onclick="copyToClipboard('salary_slip', this)">salary_slip</button>
     <button class="copy-button" onclick="copyToClipboard('bank_narration', this)">bank_narration</button>
     <button class="copy-button" onclick="copyToClipboard('company_id', this)">company_id</button>
+    <h5>QID_101</h5>
+    <button class="copy-button" onclick="copyToClipboard('not found', this)">not found</button>
     <h2>QID_061</h2>
     <button class="copy-button" onclick="copyToClipboard('Approved', this)">Approved</button>
     <h2>QID_102</h2>
@@ -146,7 +148,7 @@
       </p>
       
       <p class="copyright">
-        &copy; 2022  <a href="https://opensecai.com">OpensecAi</a>. All rights reserved <a href="https://imaltaf.online"> - Devloped by ALTAF</a> 
+        &copy; 2022  <a href="https://opensecai.com">OpensecAi</a>. All rights reserved <a href="https://imaltaf.online">  Devloped by ALTAF</a> 
       </p>
 
     </div>

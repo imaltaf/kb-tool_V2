@@ -7,20 +7,25 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to bottom right, #4A00E0, #8E2DE2);
+  background: linear-gradient(to bottom right, #27252c, #8E2DE2);
+  background-size: cover; /* Ensure the background covers the entire viewport */
+  background-attachment: fixed; /* Make the background fixed */
 }
 
-h2,h5,h4 {
+
+h2, h5, h4 {
   color: #FFF;
 }
 
-.container {
+.container,
+.container0,
+.company-input-container {
   margin: 50px auto;
   padding: 20px;
   background: rgba(255, 255, 255, 0.15);
   border-radius: 20px;
   backdrop-filter: blur(10px);
-  max-width: 90%;
+  max-width: 50%;
 }
 
 .header_h1 {
@@ -29,13 +34,18 @@ h2,h5,h4 {
   margin-bottom: 20px;
 }
 
+.container-Ag {
+  text-align: center;
+  width: 140px;
+  margin-bottom: 20px;
+}
 
-.container-Ag,
 .container-ids {
   margin-bottom: 20px;
 }
 
-input[type="text"] {
+input[type="text"],
+.company-input {
   width: 100%;
   padding: 10px;
   border-radius: 10px;
@@ -45,24 +55,61 @@ input[type="text"] {
   color: #FFF;
 }
 
-.button-container {
+.button-container,
+.header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-button {
-  padding: 10px 20px;
+button,
+.reset-button,
+.search-button,
+.header-button {
+  padding: 8px 16px; /* Reduced padding to make buttons smaller */
   border: none;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.2);
   color: #FFF;
   cursor: pointer;
+  margin-right: 10px;
+  transition: border-color 0.3s ease; /* Add transition effect for hover */
 }
 
-button:hover {
+button:last-child,
+.reset-button:last-child,
+.search-button:last-child,
+.header-button:last-child {
+  margin-right: 0;
+}
+
+button:hover,
+.search-button:hover {
   background: rgba(255, 255, 255, 0.3);
+  border: 2px solid rgb(178, 32, 214);
 }
 
+.reset-button {
+  background: rgba(255, 0, 0, 0.2); /* Red background for reset button */
+}
+
+.reset-button:hover {
+  background: rgba(255, 0, 0, 0.3); /* Darker red background on hover */
+  border: 2px solid red; /* Red border on hover */
+}
+
+#resetButton {
+  background: rgba(255, 0, 0, 0.2); /* Red background for reset button */
+}
+
+#resetButton:hover {
+  background: rgba(255, 0, 0, 0.3); /* Darker red background on hover */
+  border: 2px solid red; /* Red border on hover */
+}
+
+.button-0{
+  margin: 10px;
+}
 #output {
   margin-top: 20px;
   padding: 10px;
@@ -77,7 +124,7 @@ button:hover {
 }
 
 .tab {
-  padding: 10px 20px;
+  padding: 8px 16px; /* Reduced padding to make tabs smaller */
   background: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   color: #FFF;
@@ -126,52 +173,52 @@ button:hover {
   opacity: 0.7;
 }
 
-/* CSS for container0 */
-.container0 {
-  margin: 50px auto;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  max-width: 90%;
-}
-
-/* CSS for header buttons */
-.header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.header-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-/* Different colors for each header button */
-.header-button:nth-child(1) {
-  background: #4CAF50; /* Green */
-}
-
-.header-button:nth-child(2) {
-  background: #f44336; /* Red */
-}
-
-.header-button:nth-child(3) {
-  background: #2196F3; /* Blue */
-}
-
-/* CSS for content tabs */
-.content {
-  display: none;
+/* CSS for placeholder text */
+#loanId::placeholder,
+#ids::placeholder,
+#companyName::placeholder {
+  color: rgba(255, 255, 255, 0.5); /* Set placeholder text color */
+  font-style: italic; /* Italicize the placeholder text */
 }
 
 /* Media Query for Mobile */
 @media screen and (max-width: 600px) {
   .container,
-  .container0 {
+  .container0,
+  .company-input-container {
     margin: 20px auto; /* Adjusting margins for mobile */
+    max-width: 90%;
+  }
+
+  .button-container,
+  .header {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: stretch; /* Stretch buttons to full width */
+  }
+
+  button,
+  .reset-button,
+  .search-button,
+  .header-button {
+    margin-right: 0;
+    margin-bottom: 10px; /* Add margin between buttons */
+  }
+
+  button:last-child,
+  .reset-button:last-child,
+  .search-button:last-child,
+  .header-button:last-child {
+    margin-bottom: 0; /* Remove margin from the last button */
+  }
+
+  button,
+  .reset-button,
+  .search-button,
+  .header-button {
+    padding: 6px 12px; /* Adjusted padding for smaller buttons */
+  }
+
+  .tab {
+    padding: 6px 12px; /* Adjusted padding for smaller tabs */
   }
 }
